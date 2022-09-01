@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:maidenhead/maidenhead.dart';
+import 'package:gridlocator/gridlocator.dart';
 
 class _T {
-  const _T(this.maidenhead, this.latitude, this.longitude);
-  final String maidenhead;
+  const _T(this.gridlocator, this.latitude, this.longitude);
+  final String gridlocator;
   final double latitude;
   final double longitude;
 }
@@ -18,20 +18,20 @@ void main() {
   ];
 
   targets.asMap().forEach((int _, _T t) {
-    test('Test Maidenhead Encode | [${t.maidenhead}]', () {
+    test('Test Gridlocator Encode | [${t.gridlocator}]', () {
       expect(
-        Maidenhead(t.latitude, t.longitude).encode(),
-        t.maidenhead,
+        Gridlocator(t.latitude, t.longitude).encode(),
+        t.gridlocator,
       );
     });
 
-    test('Test Maidenhead Decode | [${t.maidenhead}]', () {
+    test('Test Gridlocator Decode | [${t.gridlocator}]', () {
       expect(
-        Maidenhead.decode(t.maidenhead).latitude,
+        Gridlocator.decode(t.gridlocator).latitude,
         closeTo(t.latitude, .1),
       );
       expect(
-        Maidenhead.decode(t.maidenhead).longitude,
+        Gridlocator.decode(t.gridlocator).longitude,
         closeTo(t.longitude, .1),
       );
     });
@@ -41,11 +41,11 @@ void main() {
   test('Test Digits Exception  | [$digit5]', () {
     Exception? err;
     try {
-      Maidenhead.decode(digit5);
-    } on MaidenheadException catch (e) {
+      Gridlocator.decode(digit5);
+    } on GridlocatorException catch (e) {
       err = e;
     }
     expect(err, isNotNull);
-    expect(err, isA<MaidenheadException>());
+    expect(err, isA<GridlocatorException>());
   });
 }

@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'util/maidenhead_exception.dart';
+import 'util/gridlocator_exception.dart';
 
-class Maidenhead {
-  const Maidenhead(this.latitude, this.longitude);
+class Gridlocator {
+  const Gridlocator(this.latitude, this.longitude);
   final double latitude;
   final double longitude;
 
@@ -15,12 +15,12 @@ class Maidenhead {
     return _encode(this);
   }
 
-  static Maidenhead decode(String mhstring) {
+  static Gridlocator decode(String mhstring) {
     return _decode(mhstring);
   }
 }
 
-String _encode(Maidenhead m) {
+String _encode(Gridlocator m) {
   var lat = m.latitude + 90;
   var lng = m.longitude + 180;
 
@@ -47,9 +47,9 @@ String _encode(Maidenhead m) {
   return locator;
 }
 
-Maidenhead _decode(String glstring) {
+Gridlocator _decode(String glstring) {
   if (glstring.length != 6) {
-    throw MaidenheadException('Invalid argument must be 6 digit');
+    throw GridlocatorException('Invalid argument must be 6 digit');
   }
 
   final lint = <int>[
@@ -76,12 +76,12 @@ Maidenhead _decode(String glstring) {
       (lint[5].toDouble() / 24) -
       90;
 
-  return Maidenhead(lat, lng);
+  return Gridlocator(lat, lng);
 }
 
 String _n2l(int number, bool uppercase) {
   if (number > (0x17)) {
-    throw MaidenheadException('Invalid number is out of range');
+    throw GridlocatorException('Invalid number is out of range');
   }
   final n = number + 0x61;
   final result = const AsciiDecoder().convert([n]);

@@ -1,8 +1,9 @@
-# Maidenhead
+# Gridlocator
 
 [![CI Test](https://github.com/tai-ga/maidenhead/actions/workflows/ci-test.yaml/badge.svg)](https://github.com/tai-ga/maidenhead/actions/workflows/ci-test.yaml)
+[![codecov](https://codecov.io/gh/tai-ga/maidenhead/branch/main/graph/badge.svg?token=5MWX6PWJ8M)](https://codecov.io/gh/tai-ga/maidenhead)
 
-Maidenhead Locator (grid square) System in Dart.
+A library for converting a latitude and longitude into a Maidenhead grid locator.
 
 Based on the algorithm published by Edmund T. Tyson, N5JTY, titled "Conversion Between Geodetic and Grid Locator Systems" in _QST_ January 1989, pp. 29-30, 43.
 
@@ -21,7 +22,7 @@ Encoding
 ```dart
 import 'package:maidenhead/maidenhead.dart';
 
-const m = Maidenhead(-34.91, -56.211666666666667);
+const m = Gridlocator(-34.91, -56.211666666666667);
 print(m.encode()); // output: GF15vc
 ```
 
@@ -30,7 +31,7 @@ Decoding
 ```dart
 import 'package:maidenhead/maidenhead.dart';
 
-final m = Maidenhead.decode('GF15vc');
+final m = Gridlocator.decode('GF15vc');
 print(m.latitude); // output: -34.916666666666664
 print(m.longitude); // output: -56.25
 ```
