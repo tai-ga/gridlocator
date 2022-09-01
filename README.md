@@ -1,7 +1,8 @@
 # Gridlocator
 
-[![CI Test](https://github.com/tai-ga/maidenhead/actions/workflows/ci-test.yaml/badge.svg)](https://github.com/tai-ga/maidenhead/actions/workflows/ci-test.yaml)
-[![codecov](https://codecov.io/gh/tai-ga/maidenhead/branch/main/graph/badge.svg?token=5MWX6PWJ8M)](https://codecov.io/gh/tai-ga/maidenhead)
+[![CI Test](https://github.com/tai-ga/gridlocator/actions/workflows/ci-test.yaml/badge.svg)](https://github.com/tai-ga/gridlocator/actions/workflows/ci-test.yaml)
+[![codecov](https://codecov.io/gh/tai-ga/gridlocator/branch/main/graph/badge.svg?token=5MWX6PWJ8M)](https://codecov.io/gh/tai-ga/gridlocator)
+[![pub package](https://img.shields.io/pub/v/gridlocator.svg)](https://pub.dev/packages/gridlocator)
 
 A library for converting a latitude and longitude into a Maidenhead grid locator.
 
