@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'util/gridlocator_exception.dart';
 
 class Gridlocator {
+  /// Constructor, Take the latitude and longitude as arguments
   const Gridlocator(this.latitude, this.longitude);
   final double latitude;
   final double longitude;
@@ -11,10 +12,15 @@ class Gridlocator {
     return '$latitude, $longitude, ${encode()}';
   }
 
+  /// Returns to gridlocator string
   String encode() {
     return _encode(this);
   }
 
+  /// Returns to Gridlocator Object
+  /// takes a gridlocator string as an argument
+  ///
+  /// Throws a [GridlocatorException].
   static Gridlocator decode(String mhstring) {
     return _decode(mhstring);
   }
