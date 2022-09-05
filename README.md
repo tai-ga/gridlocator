@@ -21,7 +21,7 @@ The [Maidenhead Locator System](https://en.wikipedia.org/wiki/Maidenhead_Locator
 Encoding
 
 ```dart
-import 'package:maidenhead/maidenhead.dart';
+import 'package:gridlocator/gridlocator.dart';
 
 const m = Gridlocator(-34.91, -56.211666666666667);
 print(m.encode()); // output: GF15vc
@@ -30,7 +30,7 @@ print(m.encode()); // output: GF15vc
 Decoding
 
 ```dart
-import 'package:maidenhead/maidenhead.dart';
+import 'package:gridlocator/gridlocator.dart';
 
 final m = Gridlocator.decode('GF15vc');
 print(m.latitude); // output: -34.916666666666664
