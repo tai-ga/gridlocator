@@ -69,7 +69,7 @@ Gridlocator _decode(String glstring) {
 
     // Subsquare
     _l2n(glstring.substring(4, 5)),
-    _l2n(glstring.substring(5, 6))
+    _l2n(glstring.substring(5, 6)),
   ];
 
   final lng = (lint[0].toDouble() * 20) +
