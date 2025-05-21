@@ -19,7 +19,7 @@ jobs:
           flutter analyze
           flutter test --coverage --coverage-path=~/coverage/lcov.info
       - name: uploard codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: ~/coverage/lcov.info
