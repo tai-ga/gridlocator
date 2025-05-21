@@ -1,6 +1,6 @@
 name: gridlocator
 description: A library for converting a latitude and longitude into a Maidenhead grid locator.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/tai-ga/gridlocator
 
 environment:
