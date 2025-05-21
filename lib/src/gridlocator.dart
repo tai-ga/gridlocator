@@ -86,7 +86,7 @@ Gridlocator _decode(String glstring) {
 }
 
 String _n2l(int number, bool uppercase) {
-  if (number > (0x17)) {
+  if (number > 0x17) {
     throw GridlocatorException('Invalid number is out of range');
   }
   final n = number + 0x61;
