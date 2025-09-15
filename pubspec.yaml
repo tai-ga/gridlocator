@@ -15,6 +15,6 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  pedantic_mono: ^1.29.0
+  pedantic_mono: ^1.33.0
 
 flutter:
