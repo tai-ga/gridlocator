@@ -5,16 +5,7 @@ homepage: https://github.com/tai-ga/gridlocator
 
 environment:
   sdk: '>=3.1.1 <4.0.0'
-  flutter: ">=1.17.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
-  flutter_test:
-    sdk: flutter
-  pedantic_mono: ^1.33.0
-
-flutter:
+  lints: any # Ignoring the version to allow editing across SDK versions.
+  test: any # Ignoring the version to allow editing across SDK versions.
