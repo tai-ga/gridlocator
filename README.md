@@ -24,7 +24,7 @@ Add `gridlocator` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  gridlocator: ^0.0.5
+  gridlocator: ^0.0.6
 ```
 
 Then run:
