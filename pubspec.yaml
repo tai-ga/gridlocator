@@ -7,5 +7,6 @@ environment:
   sdk: '>=3.1.1 <4.0.0'
 
 dev_dependencies:
+  coverage: any # Provides format_coverage to convert JSON coverage to lcov format
   lints: any # Ignoring the version to allow editing across SDK versions.
   test: any # Ignoring the version to allow editing across SDK versions.
